@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "pytest-cov>=7.0.0",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -13,5 +15,21 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["gendiff"]
 
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.14.10",
+]
+
 [project.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+preview = true
+select = ["E", "F", "I", "C90"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]

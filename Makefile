@@ -6,3 +6,9 @@ package-install:
 
 gendiff:
 	uv run gendiff
+
+lint:
+	uv run ruff check gendiff
+
+test:
+	uv run pytest --cov=gendiff --cov-report=xml
