@@ -1,6 +1,3 @@
-import json
-
-
 def build_diff(data1, data2):
     keys = sorted(data1.keys() | data2.keys())
     diff = []
@@ -16,10 +13,6 @@ def build_diff(data1, data2):
             diff.append(('unchanged', key, data1[key]))
     
     return diff
-
-def parse(path_to_file):
-    with open(path_to_file) as file:
-        return json.load(file)
 
 def format_value(value):
     if isinstance(value, bool):
