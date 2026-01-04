@@ -20,13 +20,13 @@ def test_gendiff_yaml():
 
     assert generate_diff(f1, f2) == read_file('test_result_file.txt')
 
-def test_gendiff_yaml():
+def test_gendiff_yaml1():
     f1 = DATA_DIR / 'test_rec_file1.yaml'
     f2 = DATA_DIR / 'test_rec_file2.yaml'
 
     assert generate_diff(f1, f2) == read_file('test_result_rec_file.txt')
 
-def test_gendiff_json():
+def test_gendiff_json1():
     f1 = DATA_DIR / 'test_rec_file1.json'
     f2 = DATA_DIR / 'test_rec_file2.json'
 
