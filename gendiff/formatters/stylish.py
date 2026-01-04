@@ -34,8 +34,10 @@ def format_stylish(diff, depth=1):
 
     return '\n'.join(lines)
 
+
 def format_diff(diff):
     return '{\n' + format_stylish(diff) + '\n}'
+
 
 def stringify(value, depth):
     if not isinstance(value, dict):
