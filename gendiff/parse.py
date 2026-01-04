@@ -15,4 +15,4 @@ def parse(path_to_file):
         elif suff == '.json':
             return json.load(file)
         
-    raise ValueError(f'Unsupported file format')
+    raise ValueError(f'Unsupported file format: {suff}')
