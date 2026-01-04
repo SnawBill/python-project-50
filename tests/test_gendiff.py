@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / 'test_data'
 
-def  read_file(file):
+def read_file(file):
     return (DATA_DIR / file).read_text()
 
 def test_gendiff_json():
